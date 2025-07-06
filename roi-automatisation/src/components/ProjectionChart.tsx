@@ -53,23 +53,15 @@ export default function ProjectionChart({ tasks, hourlyCost }: ProjectionChartPr
         display: true,
         position: 'bottom' as const,
         labels: {
-          color: '#9ca3af',
+          color: '#ffffff',
           padding: 15,
           font: {
-            size: 12
+            size: 12,
+            weight: 'normal' as const
           },
           usePointStyle: false,
-          generateLabels: function(chart: any) {
-            const data = chart.data;
-            return data.datasets.map((dataset: any, i: number) => ({
-              text: dataset.label,
-              fillStyle: 'transparent',
-              strokeStyle: dataset.borderColor,
-              lineWidth: 3,
-              hidden: !chart.isDatasetVisible(i),
-              index: i
-            }));
-          }
+          boxWidth: 35,
+          boxHeight: 2
         }
       },
       title: {
