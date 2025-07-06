@@ -57,7 +57,7 @@ export default function ProjectionChart({ tasks, hourlyCost }: ProjectionChartPr
           padding: 15,
           font: {
             size: 13,
-            weight: '500' as const
+            weight: 'normal' as const
           },
           usePointStyle: false,
           boxWidth: 30,
